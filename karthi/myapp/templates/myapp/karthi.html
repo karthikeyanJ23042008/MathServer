@@ -1,0 +1,27 @@
+
+<html>
+<head>
+    <title>Churn Rate Calculator</title>
+</head>
+<body>
+
+    <h2>Churn Rate Calculator</h2>
+
+    <form method="POST">
+        {% csrf_token %}
+
+        Initial Customers:
+        <input type="number" name="initial" required>
+        <br><br>
+
+        Final Customers:
+        <input type="number" name="final" required>
+        <br><br>
+
+        <input type="submit" value="Calculate">
+    </form>
+
+    <h3>Churn Rate = {{ churn }} %</h3>
+
+</body>
+</html>
